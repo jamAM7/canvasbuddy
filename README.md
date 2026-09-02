@@ -1,6 +1,6 @@
 # canvasbuddy
 
-A student app that syncs Canvas into one place: AI-generated notes as calendar
+A student app that syncs Canvas into one place: AI-generated notes and calendar
 
 ## Overview
 
@@ -12,7 +12,7 @@ StudyFlow pulls course content and deadlines from Canvas, turns them into organi
 |---|---|
 | **Notes** | Canvas content → AI-generated notes, organised per-subject / per-week, editable in a word-editor-style view |
 | **Calendar** | Subscribes to UTS + external calendars; pulls assessments from Canvas; three object types — classes, assessment tasks, self/AI tasks; assessments auto-break into subtasks |
-| **Dashboard** | Notifications, "due this week", quick links into notes and quizzes |
+| **Dashboard** | Notifications, "due this week", quick links into notes |
 | **Settings** | Canvas connection, calendar subscriptions, preferences |
 | **Sign up** | Single-role (student) auth for MVP |
 
@@ -37,13 +37,10 @@ StudyFlow pulls course content and deadlines from Canvas, turns them into organi
 │   ├── notes/                  # Notes: subject list -> week detail
 │   │   └── [subjectId]/[weekId]/
 │   ├── calendar/               # Calendar view
-│   ├── quiz/                   # Quiz list -> quiz detail
-│   │   └── [quizId]/
 │   ├── settings/                
 │   └── api/                    # Backend logic (Route Handlers)
 │       ├── canvas/sync/        # Pull courses/assignments from Canvas
 │       ├── notes/generate/     # Canvas content -> AI notes
-│       ├── quiz/generate/      # Notes -> AI quiz
 │       └── calendar/sync/      # External calendar subscriptions
 ├── components/                 # Shared UI, grouped by feature
 ├── lib/
